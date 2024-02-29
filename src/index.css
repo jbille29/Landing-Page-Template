@@ -24,6 +24,8 @@ a:hover {
 
 body {
   margin: 0;
+  display: flex;
+  place-items: center;
   
   min-width: 320px;
   min-height: 100vh;
@@ -68,7 +70,7 @@ button:focus-visible {
 
 .landing-container {
   display: flex;
-  height: 100vh;
+  
 
   /*scale*/
   flex-direction: column;
@@ -118,7 +120,7 @@ button:focus-visible {
   border: 1px solid transparent;
   padding: 0.6em 1.2em;
   font-size: 1rem;
-  height: 
+  
 }
 
 .hero-container {
@@ -132,6 +134,7 @@ button:focus-visible {
 }
 
 .hero {
+  max-width: 600px;
 
    /*scale*/
    width: 100%;
@@ -176,5 +179,23 @@ button:focus-visible {
 
 /* Desktop (for screens wider than 1024px) */
 @media (min-width: 1024px) {
+
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  .landing-container {
+    background-color: rebeccapurple;
+    
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+
+  }
+
+  .hero-container {
+    margin-top: 0;
+  }
   
 }
