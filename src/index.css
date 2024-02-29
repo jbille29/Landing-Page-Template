@@ -24,8 +24,7 @@ a:hover {
 
 body {
   margin: 0;
-  display: flex;
-  place-items: center;
+  
   min-width: 320px;
   min-height: 100vh;
 }
@@ -65,4 +64,74 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+.landing-container {
+  display: flex;
+  height: 100vh;
+
+  /*scale*/
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+
+  /*dev*/
+  
+
+}
+
+.copy-container {
+
+   /*scale*/
+  width: 95%;
+
+}
+
+.copy-container h1 {
+
+  text-align: center;
+  
+
+}
+
+.copy-container p {
+
+  text-align: center;
+  
+ 
+}
+
+.signup-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.hero-container {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+   /*scale*/
+   width: 95%;
+
+  /*dev */
+  background-color: #535bf2;
+}
+
+.hero {
+
+   /*scale*/
+   width: 100%;
+}
+
+/* Tablet (for screens wider than 768px) */
+@media (min-width: 768px) {
+  
+
+/* Desktop (for screens wider than 1024px) */
+@media (min-width: 1024px) {
+  
 }
