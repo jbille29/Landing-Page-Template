@@ -11,23 +11,26 @@ const App = () => {
     <div className="landing-container">
       <Navbar/>
 
-      <div className="copy-container">
+      <main>
 
-        <h1>Light up your cat's world with Purrjection</h1>
-        <p>Millions of companies of all sizes use Stripe online and in person to accept payments, send payouts, automate financial processes, and ultimately grow revenue.</p>
-        <div className="signup-container">
-          <label htmlFor=""></label>
-          <input type="email" 
-            placeholder='cool-cat-owner@catsrule.com'/>
-          <button>Sign up</button>
+        <div className="copy-container">
+
+          <h1>Light up your cat's world with <span class="underline">Purrjection</span></h1>
+          <p>Millions of companies of all sizes use Stripe online and in person to accept payments, send payouts, automate financial processes, and ultimately grow revenue.</p>
+          <div className="signup-container">
+            <label htmlFor=""></label>
+            <input type="email" 
+              placeholder='cool-cat-owner@catsrule.com'/>
+            <button>Sign up</button>
+          </div>
+          
         </div>
-        
-      </div>
 
-      <div className="hero-container">
-     
-        <img className='hero' src={heroImg} alt="" />
-      </div>
+        <div className="hero-container">
+      
+          <img className='hero' src={heroImg} alt="" />
+        </div>
+      </main>
 
     </div>
   )

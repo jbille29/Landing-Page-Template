@@ -29,13 +29,28 @@ a:hover {
   color: #535bf2;
 }
 
+#root {
+  width: 100%; /* Ensure the root div takes the full width */
+  display: flex; /* Apply flex to enable centering of its child */
+  justify-content: center; /* Center child horizontally */
+  align-items: center; /* Center child vertically */
+  min-height: 100vh; /* Ensures the root div takes up at least the full viewport height */
+}
+
 body {
   margin: 0;
   display: flex;
-  place-items: center;
-  
-  min-width: 320px;
-  min-height: 100vh;
+  align-items: center; /* This correctly vertically centers the content */
+  justify-content: center; /* This correctly horizontally centers the content */
+  min-height: 100vh; /* Ensures the body takes up at least the full viewport height */
+  font-family: "Varela Round", sans-serif; /* Choose one primary font-family for consistency */
+  color: rgba(0, 0, 0, 0.87);
+  background-color: #FAFAFA; /* Choose one background-color for body */
+  font-weight: 400;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 h1 {
@@ -64,27 +79,12 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
 .landing-container {
   display: flex;
-
-  /*scale*/
+  width: 100%; /* Or any specific width you prefer */
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   padding: 0 1rem;
 
   /*dev*/
@@ -94,7 +94,7 @@ button:focus-visible {
 
    /*scale*/
   width: 100%;
-  
+  max-width: 750px;
 
 }
 
@@ -115,6 +115,13 @@ button:focus-visible {
   font-size: 1.1rem;
   color: rgba(0, 0, 0, 0.7);
 }
+
+.underline {
+  text-decoration: underline;
+  text-decoration-color: #38b6ff; /* The blue color used for the sign-up button */
+  text-decoration-thickness: .35rem; /* Adjust thickness as needed */
+}
+
 
 
 /* Container styles */
@@ -183,7 +190,7 @@ button:focus-visible {
   align-items: center;
   
    /*scale*/
-   width: 95%;
+   width: 100%;
 }
 
 .hero {
@@ -200,7 +207,6 @@ button:focus-visible {
 }
 
 nav {
-  
   width: 100%;
   margin: 0;
   display: flex;
@@ -218,74 +224,46 @@ nav img {
 @media (min-width: 768px) {
 
   .copy-container {
-    width: 85%;
-    background-color: red;
+    margin-top: 3rem;
   }
-
-  .copy-container h1 {
-    font-size: 4.5rem;
-  }
-
-  .copy-container p {
-    font-size: 1.3rem;
-  }
-
-  .signup-container input{
-    width: 35%; /* or specific px/em/rem value */
-    height: 40px; /* Adjust as needed */
-    font-size: 1.3rem; /* Adjust as needed */
-    padding: 5px; /* Optional: Adds space inside the input */
-    border-radius: 8px;
-  }
-
-  .signup-container button {
-    border: 1px solid transparent;
-    padding: 0.6em 1.2em;
-    font-size: 1.3rem;
-  }
-
-  .hero-container {
-    margin-top: 5rem;
-    width: 85%;
-  }
-
-  .camera-image {
-    max-width: 350px;
-  }
+ 
 }
   
 
 /* Desktop (for screens wider than 1024px) */
 @media (min-width: 1024px) {
-
+  
   body {
-    display: flex;
-    place-items: center;
+    
     background-image: url('./assets/background.png');
     background-size: cover; /* Cover the entire page */
     background-position: center; /* Center the background image */
     background-repeat: no-repeat; /* Do not repeat the image */
   }
 
-  .landing-container {
-    
-    
-    flex-direction: row;
-
+  main {
+    display: flex;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
   }
 
   .copy-container {
 
-    max-width: 770px;
+    margin-right: 2rem;
+  }
+  .hero-container {
+    max-width: 600px;
   }
 
-  .hero-container {
-    margin-top: 0;
-    width: 600px;
-
-    flex-direction: row;
+  .hero {
+    width: 65%;
   }
   
 }
+
+
+body {
+  background-image: url('./assets/smallbackground.png');
+}
+
