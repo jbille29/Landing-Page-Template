@@ -219,6 +219,10 @@ nav img {
 
 }
 
+main { 
+  margin-bottom: 2rem;
+}
+
 
 /* Tablet (for screens wider than 768px) */
 @media (min-width: 768px) {
