@@ -24,10 +24,10 @@ const EmailForm = () => {
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
-        placeholder="Enter your email"
+        placeholder="Enter your email address"
         required
       />
-      <button type="submit">Submit</button>
+      <button type="submit">Join our Waitlist</button>
     </form>
   );
 };

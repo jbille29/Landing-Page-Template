@@ -18,7 +18,16 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  --darkest-blue: #1666ba;
+  --dark-blue: #368ce7;
+  --med-blue:#7ab3ef;
+  --light-blue:#bedaf7;
+  --lightest-blue: #deecfb;
+  --denim: #1482cc;
+  --dodger: #18a9f2;
+
 }
+
 
 a {
   font-weight: 500;
@@ -51,7 +60,9 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
+
 
 h1 {
   font-size: 3.2em;
@@ -66,7 +77,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #646cff;
+  background-color: var(--dodger);
   cursor: pointer;
   transition: border-color 0.25s;
 }
@@ -99,7 +110,6 @@ button:focus-visible {
 }
 
 .copy-container h1 {
-
   text-align: center;
   font-family: "Poppins", sans-serif;
   font-weight: 700;
@@ -107,7 +117,6 @@ button:focus-visible {
 
   margin-top: 2rem;
   margin-bottom: 2rem;
-
 }
 
 .copy-container p {
@@ -118,11 +127,9 @@ button:focus-visible {
 
 .underline {
   text-decoration: underline;
-  text-decoration-color: #38b6ff; /* The blue color used for the sign-up button */
+  text-decoration-color: var(--med-blue); /* The blue color used for the sign-up button */
   text-decoration-thickness: .35rem; /* Adjust thickness as needed */
 }
-
-
 
 /* Container styles */
 .signup-container {
@@ -137,11 +144,10 @@ button:focus-visible {
   gap: 15px; /* Space between elements */
 }
 
-/* Label styles (if you decide to use a label later) */
-.signup-container label {
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 5px;
+.copy-container .signup-container p{ 
+  margin-bottom: 0;
+  font-size: 1.1rem;
+  text-align: left;
 }
 
 /* Input field styles */
@@ -164,7 +170,7 @@ button:focus-visible {
   padding: 10px 20px;
   font-size: 16px;
   color: white; /* Text color */
-  background-color: #38b6ff; /* Button color to match your site's theme */
+  background-color: var(--dark-blue); /* Button color to match your site's theme */
   border: none; /* Remove the default border */
   border-radius: 4px; /* Rounded corners for the button */
   cursor: pointer; /* Pointer cursor on hover */
@@ -174,7 +180,7 @@ button:focus-visible {
 /* Button hover and focus styles */
 .signup-container button:hover,
 .signup-container button:focus {
-  background-color: #2a8cc4; /* Darker shade on hover/focus */
+  background-color: var(--darkest-blue); /* Darker shade on hover/focus */
 }
 
 /* Ensuring accessibility */
@@ -219,9 +225,100 @@ nav img {
 
 }
 
-main { 
+header { 
+  margin-bottom: 3rem;
+}
+
+.product-features {
+  display: flex;
+  flex-direction: column;
+  
+  align-items: center;
+
+   /*scale*/
+   width: 100%;
+ 
+   margin-bottom: 2rem;;
+   
+}
+
+.product-features-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  text-align: center;
+
+  width: 100%;
+}
+
+.product-features-list div {
+  margin: 0 .75rem;
+  width: 300px;
+}
+
+.product-features h5 {
+  font-size: 1.2rem;
+  margin-bottom: .5rem;
+  color: white;
+  background-color: var(--dark-blue);
+  font-family: 'Poppins', sans-serif;
+  padding: .75rem .25rem;
+  text-align: center;
+}
+
+.product-features-list p {
+  margin-top: 0;
+  font-size: .9rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.product-image p {
+  font-style: italic;
+  font-size: .7rem;
+  width: 70%;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.product-image {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.product-features img {
+  margin-right: 2rem;
+  width: 70%;
+  height: auto;
+}
+
+.gradient-border {
+  content: "";
+  display: block;
+  margin: 20px 0;
+  margin-bottom: 2.5rem;
+  height: .5px;
+  width: 80%;
+  background: linear-gradient(to right, transparent, #141414, transparent);
+}
+
+.contact-us {
+  text-align: center;
   margin-bottom: 2rem;
 }
+
+.contact-us h3{
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  font-family: 'Poppins', sans-serif;
+  
+  text-align: center;
+}
+
+.strong {
+  font-weight: 800;
+}
+
+
 
 
 /* Tablet (for screens wider than 768px) */
@@ -237,15 +334,9 @@ main {
 /* Desktop (for screens wider than 1024px) */
 @media (min-width: 1024px) {
   
-  body {
-    
-    background-image: url('./assets/background.png');
-    background-size: cover; /* Cover the entire page */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-  }
 
-  main {
+
+  .heading {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -259,15 +350,29 @@ main {
   .hero-container {
     max-width: 600px;
   }
-
   .hero {
-    width: 65%;
+    width: 100%;
   }
+
+  .product-features {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;       
+  }
+
+  .product-features img {
+    margin-right: 2rem;
+  }
+
+  .product-features-list {
+    display: flex;
+    flex-direction: column;
+    
+    text-align: left;
   
+    width: 30%;
+  }  
 }
 
-
-body {
-  background-image: url('./assets/smallbackground.png');
-}
 
